@@ -11,7 +11,7 @@ import Stack from '@mui/material/Stack'
 import InputAdornment from '@mui/material/InputAdornment'
 import PersonOutlined from '@mui/icons-material/PersonOutlined'
 import LockOutlined from '@mui/icons-material/LockOutlined'
-import logoCompleta from '../assets/logo-completa.png'
+import logoCompleta from '../assets/logo-completa-v2.jpeg'
 import { toastError } from '../components/showAlert'
 import {
   canAccessPrivateRoute,

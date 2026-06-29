@@ -26,6 +26,7 @@ import type { Cliente } from '../services/clientes'
 import type { Colaborador } from '../services/colaboradores'
 import type { Servico } from '../services/servicos'
 import { formatMoedaBrlFromNumber } from '../utils/masks'
+import { PERFIL_CLIENTE } from '../constants/Perfil'
 
 const NAVY = '#1e3a5f'
 const BORDER = '#e2e8f0'
@@ -52,6 +53,8 @@ type AgendamentoFormModalProps = {
   open: boolean
   mode: 'create' | 'edit' | 'view'
   initial?: Agendamento
+  usuarioLogadoId?: number
+  usuarioLogadoPerfilId?: number
   clientes: Cliente[]
   colaboradores: Colaborador[]
   servicos: Servico[]
@@ -130,6 +133,8 @@ export default function AgendamentoFormModal({
   open,
   mode,
   initial,
+  usuarioLogadoId,
+  usuarioLogadoPerfilId,
   clientes,
   colaboradores,
   servicos,
@@ -160,6 +165,8 @@ export default function AgendamentoFormModal({
 
   const labelSubmit = isEdit ? 'Salvar' : 'Adicionar'
 
+  const usuarioEhCliente = usuarioLogadoPerfilId === PERFIL_CLIENTE
+
   const servicoSelecionado = useMemo(
     () => servicos.find((servico) => servico.id === values.servicoId),
     [servicos, values.servicoId],
@@ -176,10 +183,16 @@ export default function AgendamentoFormModal({
     }
 
     queueMicrotask(() => {
-      setValues(agendamentoToValues(initial))
+      const novosValores = agendamentoToValues(initial)
+
+      if (!initial && usuarioEhCliente && usuarioLogadoId) {
+        novosValores.clienteId = String(usuarioLogadoId)
+      }
+
+      setValues(novosValores)
       setErroLocal(null)
     })
-  }, [open, initial])
+  }, [open, initial, usuarioEhCliente, usuarioLogadoId])
 
   async function handleFormSubmit(e: FormEvent) {
     e.preventDefault()
@@ -323,32 +336,39 @@ export default function AgendamentoFormModal({
             ))}
           </TextField>
 
-          <TextField
-            select
-            fullWidth
-            label="Cliente"
-            value={values.clienteId}
-            onChange={(e) => updateValue('clienteId', e.target.value)}
-            disabled={enviando || somenteLeitura}
-            slotProps={{
-              input: {
-                readOnly: somenteLeitura,
-                startAdornment: (
-                  <InputAdornment position="start">
-                    <PersonOutlineOutlined sx={{ color: '#94a3b8' }} />
-                  </InputAdornment>
-                ),
-              },
-            }}
-            sx={{ mb: 2 }}
-          >
-            <MenuItem value="">Selecione um cliente</MenuItem>
-            {clientes.map((cliente) => (
-              <MenuItem key={cliente.id} value={cliente.id}>
-                {cliente.nome}
+          {!usuarioEhCliente && (
+            <TextField
+              select
+              fullWidth
+              label="Cliente"
+              value={values.clienteId}
+              onChange={(e) => updateValue('clienteId', e.target.value)}
+              disabled={enviando}
+              slotProps={{
+                input: {
+                  startAdornment: (
+                    <InputAdornment position="start">
+                      <PersonOutlineOutlined sx={{ color: '#94a3b8' }} />
+                    </InputAdornment>
+                  ),
+                },
+              }}
+              sx={{ mb: 2 }}
+            >
+              <MenuItem value="">
+                Selecione um cliente
               </MenuItem>
-            ))}
-          </TextField>
+
+              {clientes.map((cliente) => (
+                <MenuItem
+                  key={cliente.id}
+                  value={cliente.id}
+                >
+                  {cliente.nome}
+                </MenuItem>
+              ))}
+            </TextField>
+          )}
 
           <TextField
             select

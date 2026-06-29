@@ -1308,7 +1308,7 @@ export default function DashboardPage() {
         <Dialog
           open={Boolean(selectedKpi)}
           onClose={() => setSelectedKpi(null)}
-          maxWidth="md"
+          maxWidth="sm"
           fullWidth
           slotProps={{
             paper: {
@@ -1316,6 +1316,7 @@ export default function DashboardPage() {
                 borderRadius: '18px',
                 boxShadow:
                   '0 25px 50px -12px rgba(15, 23, 42, 0.28), 0 0 0 1px rgba(15, 23, 42, 0.04)',
+                maxHeight: '90vh',
               },
             },
             backdrop: {
@@ -1327,7 +1328,7 @@ export default function DashboardPage() {
           }}
         >
           {selectedKpi && selectedKpiExplanation ? (
-            <Box sx={{ p: 3 }}>
+            <Box sx={{ p: 3, overflowY: 'auto' }}>
               <Typography sx={{ color: MUTED, fontSize: '0.72rem', fontWeight: 900, textTransform: 'uppercase' }}>
                 Indicador do dashboard
               </Typography>
@@ -1341,7 +1342,7 @@ export default function DashboardPage() {
                 <Typography sx={{ mt: 0.25, color: MUTED, fontSize: '0.82rem' }}>{selectedKpi.sub}</Typography>
               ) : null}
 
-              <Box sx={{ mt: 2.4, display: 'grid', gap: 1.6 }}>
+              <Box sx={{ mt: 2.4, display: 'grid', gap: 1.2 }}>
                 <Box>
                   <Typography sx={{ color: TEXT, fontSize: '0.88rem', fontWeight: 900 }}>O que é analisado</Typography>
                   <Typography sx={{ mt: 0.45, color: MUTED, fontSize: '0.86rem', lineHeight: 1.55 }}>

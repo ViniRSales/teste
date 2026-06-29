@@ -40,11 +40,11 @@ Este trabalho apresenta a proposta de desenvolvimento de uma solução Web chama
 
 O setor de serviços representa uma das principais forças da economia brasileira. Segundo dados do IBGE (2023)<sup>[1.1]</sup>, o setor de serviços corresponde a mais de 70% do PIB nacional, sendo responsável por grande parte da geração de empregos formais e informais no país. Dentro desse contexto, micro e pequenas empresas possuem papel fundamental, representando aproximadamente 99% dos negócios ativos no Brasil (SEBRAE, 2023)<sup>[1.2]</sup>.
 
-Entre esses negócios estão barbearias, salões de beleza, estúdios de manicure e outros estabelecimentos que operam com prestação de serviços personalizados e remuneração baseada em comissão por serviço realizado. Apesar do crescimento desse segmento, muitos desses empreendedores ainda utilizam ferramentas não especializadas para controle do negócio, como planilhas eletrônicas (ex.: Microsoft Excel) ou anotações manuais.
+O setor de beleza está entre os segmentos que mais crescem no Brasil. Segundo levantamento do Sebrae baseado em dados da Receita Federal, somente em 2023 foram registrados mais de 180 mil novos microempreendedores individuais atuando como cabeleireiros, barbeiros, manicures e demais profissionais da área<sup>[1.3]</sup>. Paralelamente, 3 em cada 4 pequenas empresas brasileiras já utilizam ferramentas digitais para realizar negócios, demonstrando que a transformação digital tornou-se uma necessidade competitiva<sup>[1.4]</sup>. Apesar do crescimento desse segmento, muitos desses empreendedores ainda utilizam ferramentas não especializadas para controle do negócio, como planilhas eletrônicas (ex.: Microsoft Excel) ou anotações manuais e, muitos desses empreendedores ainda administram seus atendimentos por meio de agendas físicas ou aplicativos de mensagens, dificultando o controle de clientes, agendamentos, faturamento e indicadores de desempenho. 
 
 Embora essas ferramentas atendam necessidades básicas, elas apresentam limitações relacionadas à escalabilidade, controle de acesso, automação de cálculos, geração de relatórios e segurança das informações. Além disso, a falta de sistemas integrados dificulta o acompanhamento em tempo real do faturamento, da produtividade dos colaboradores e do cálculo correto das comissões.
 
-Diante desse cenário, observa-se uma oportunidade para o desenvolvimento de uma solução Web especializada, que automatize processos operacionais e financeiros de empresas do setor de serviços baseadas em comissionamento.
+Diante desse cenário, observa-se uma oportunidade para o desenvolvimento de uma solução Web especializada, que automatize processos operacionais e financeiros de empresas do setor de serviços baseadas em comissionamento e, assim, contribua na redução de erros operacionais, melhora da experiência do cliente e fornecicmento de informações estratégicas que apoiem a tomada de decisão.
 
 Durante o processo de pesquisa de mercado para este projeto, foi realizada uma entrevista com o proprietário de uma barbearia denominada Baixinho Hair. Durante a conversa, foi identificado que grande parte do controle operacional e financeiro do estabelecimento é realizado por meio de planilhas do Microsoft Excel. Segundo o proprietário, esse modelo de gestão apresenta limitações relacionadas à organização das informações, controle de faturamento e acompanhamento das comissões dos colaboradores.
 
@@ -150,24 +150,7 @@ Restrições:
 
 ---
 
-◘ Atendente/Recepcionista (Opcional)
-
-Perfil:  
-- Responsável pelo agendamento e organização da agenda.
-
-Responsabilidades no sistema:  
-- Realizar agendamento de clientes;  
-- Alterar horários e reagendar serviços;  
-- Confirmar atendimentos;  
-- Consultar disponibilidade de colaboradores.
-
-Restrições:  
-- Não possui acesso a relatórios financeiros detalhados;  
-- Não visualiza valores de comissão individual.
-
----
-
-◘ Cliente (Opcional)
+◘ Cliente
 
 Perfil:  
 - Usuário final que utiliza os serviços oferecidos pelo estabelecimento;  
@@ -246,19 +229,15 @@ _Apresente aqui a conclusão do seu trabalho. Deve ser apresentada aqui uma disc
 
 # REFERÊNCIAS
 
-_Como um projeto de software não requer revisão bibliográfica, a inclusão das referências não é obrigatória. No entanto, caso você deseje incluir referências relacionadas às tecnologias, padrões, ou metodologias que serão usadas no seu trabalho, relacione-as de acordo com a ABNT._
-
-_Verifique no link abaixo como devem ser as referências no padrão ABNT:_
-
-http://portal.pucminas.br/imagedb/documento/DOC_DSC_NOME_ARQUI20160217102425.pdf
-
 **[1.1]** - _BRASIL. Empresa Brasil de Comunicação. Setor de serviços cresce 1,2% em julho e mantém recuperação. Rio de Janeiro: Agência Brasil, 2024. Disponível em: <https://agenciabrasil.ebc.com.br/radioagencia-nacional/economia/audio/2024-09/setor-de-servicos-cresce-12-em-julho-e-mantem-recuperacao>. Acesso em: 16 mar. 2026._
 
 **[1.2]** - _SERVIÇO BRASILEIRO DE APOIO ÀS MICRO E PEQUENAS EMPRESAS (SEBRAE). Pequenos negócios em números. São Paulo: SEBRAE, 2023. Disponível em: <https://sebrae.com.br/sites/PortalSebrae/ufs/sp/sebraeaz/pequenos-negocios-em-numeros,12e8794363447510VgnVCM1000004c00210aRCRD>. Acesso em: 16 mar. 2026. [sebrae.com.br]_
 
-# APÊNDICES
+**[1.3]** - _REDAÇÃO AGÊNCIA SEBRAE. Mercado aquecido: setor de beleza somou mais de 180 mil novos microempreendedores individuais em 2023. ASN Nacional, 08 fev. 2024. Disponível em: <https://agenciasebrae.com.br/economia-e-politica/mercado-aquecido-setor-de-beleza-somou-mais-de-180-mil-novos-microempreendedores-individuais-em-2023/>. Acesso em: 28 jun. 2026._
 
-_Atualizar os links e adicionar novos links para que a estrutura do código esteja corretamente documentada._
+**[1.4]** - _REDAÇÃO AGÊNCIA SEBRAE. 3 em cada 4 pequenas empresas usam ferramentas digitais para fazer negócios. ASN Nacional, 13 set. 2023. Disponível em: <https://agenciasebrae.com.br/dados/3-em-cada-4-pequenas-empresas-usam-ferramentas-digitais-para-fazer-negocios/>. Acesso em: 28 jun. 2026._
+
+# APÊNDICES
 
 ## Apêndice A - Código fonte
 

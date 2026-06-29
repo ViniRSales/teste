@@ -25,10 +25,10 @@ const ROUTES_BY_CARGO: Record<string, string[] | null> = {
 function normalizeText(value: unknown): string {
   return typeof value === 'string'
     ? value
-        .normalize('NFD')
-        .replace(/[\u0300-\u036f]/g, '')
-        .toLowerCase()
-        .trim()
+      .normalize('NFD')
+      .replace(/[\u0300-\u036f]/g, '')
+      .toLowerCase()
+      .trim()
     : ''
 }
 
@@ -66,6 +66,10 @@ export function getSession(): Session | null {
   } catch {
     return null
   }
+}
+
+export function getCurrentUser(): SessionUser | null {
+  return getSession()?.user ?? null
 }
 
 export function setSession(session: Session): void {

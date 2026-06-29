@@ -216,14 +216,17 @@ export default function DisponibilidadePage() {
       {/* Header */}
       <Box
         sx={{
-          position: 'sticky',
+          position: 'fixed',
           top: 0,
+          left: `${sidebarW}px`,
+          right: 0,
           zIndex: 10,
           bgcolor: '#ffffff',
           borderBottom: `1px solid ${BORDER}`,
           display: 'flex',
           alignItems: 'center',
           px: { xs: 1.5, sm: 2 },
+          transition: 'left 0.22s ease',
         }}
       >
         <IconButton
@@ -307,7 +310,7 @@ export default function DisponibilidadePage() {
       </Box>
 
       {/* Conteúdo */}
-      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: 3 }}>
+      <Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: 3, pt: '88px' }}>
         {loading ? (
           <Typography sx={{ color: '#64748b', mt: 2 }}>
             Carregando disponibilidade...
