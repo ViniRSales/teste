@@ -1,0 +1,51 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Servify
+message: 'If you use this software, please cite it as below.'
+type: software
+authors:
+  - family-names: Burdignon
+    given-names: Arthur Henrique Figueiredo Cayres
+  - family-names: Oliveira
+    given-names: Athur Jansen
+  - family-names: Nunes
+    given-names: Bruna Pedrosa
+  - family-names: Sivolella
+    given-names: Lucas Goncalves
+  - family-names: Sales
+    given-names: Vinicius Ramos
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: de Amaral
+    given-names: Cleia Marcia Gomes
+  - name-suffix: Professora
+    affiliation: PUC Minas
+    family-names: de Souza
+    given-names: Joana Gabriela Ribeiro
+repository-code: >-
+  https://github.com/ICEI-PUC-Minas-PPLES-TI/plf-es-2026-1-ti2-1381100-grupo3-servify
+abstract: >-
+  Servify is a service management platform developed to
+  support the digital transformation of small businesses.
+  The application provides tools for managing services,
+  customer relationships, employee activities, and
+  scheduling processes within a unified environment. Its
+  goal is to simplify business operations, improve
+  organizational efficiency, and enhance the overall
+  experience for both service providers and customers.
+keywords:
+  - service management
+  - business management
+  - small business
+  - scheduling
+  - appointment management
+  - customer relationship management
+  - workforce management
+  - service platform
+  - web application
+  - digital transformation
+license: CC-BY-4.0
+version: 1.0.0
+date-released: '2026-06-30'

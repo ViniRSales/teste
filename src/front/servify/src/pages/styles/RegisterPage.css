@@ -1,0 +1,187 @@
+/* Mesmo shell visual do login */
+.register-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  color-scheme: light;
+  background-color: #0f172a;
+  background-image: url('../../assets/bg-corporate.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.register-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(15, 23, 42, 0.55);
+  pointer-events: none;
+}
+
+.register-card {
+  position: relative;
+  z-index: 1;
+  width: min(100%, 800px);
+  max-width: 800px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: none;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.35),
+    0 12px 24px -8px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+@media (min-width: 1024px) {
+  .register-card {
+    width: min(800px, 90vw);
+  }
+}
+
+.register-card > h1.register-title.MuiTypography-root {
+  margin: 0 0 5px;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1a1d24;
+  text-align: center;
+}
+
+.register-subtitle {
+  margin: 0 0 0;
+  text-align: center;
+  color: #6b7280;
+  font-size: 0.9375rem;
+}
+
+.register-section-title {
+  margin: 28px 0 16px;
+  font-size: 0.9375rem;
+  font-weight: 700;
+  color: #1a1d24;
+}
+
+.register-section-title:first-of-type {
+  margin-top: 0;
+}
+
+.register-field .MuiFormControl-root {
+  margin: 0;
+}
+
+.register-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.register-card .register-input .MuiOutlinedInput-root {
+  min-height: 40px;
+  align-items: center;
+  border-radius: 16px;
+}
+
+/* DatePicker (MUI X) usa PickersOutlinedInput, não MuiOutlinedInput */
+.register-card .register-input .MuiPickersOutlinedInput-root {
+  border-radius: 16px;
+}
+
+.register-card .register-input .MuiInputBase-input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.register-card .register-input .MuiInputAdornment-root {
+  height: auto;
+  max-height: none;
+  align-self: center;
+}
+
+.register-card .register-input .MuiInputAdornment-root .MuiSvgIcon-root {
+  font-size: 18px;
+}
+
+.register-card .register-submit.MuiButton-root {
+  min-height: 34px;
+  margin-top: 24px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.register-card .register-submit.MuiButton-root:hover {
+  background-color: #162d4a;
+}
+
+.register-footer {
+  margin: 40px 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+  text-align: center;
+}
+
+.register-footer__muted {
+  color: #6b7280;
+}
+
+.register-footer__link {
+  margin-left: 6px;
+  font-size: inherit;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.register-footer__link:hover {
+  color: #162d4a;
+}
+
+/* DatePicker (MUI X): calendário mais compacto */
+.register-page .MuiPickersPopper-root .MuiPaper-root {
+  border-radius: 12px;
+}
+
+.register-page .MuiPickersLayout-root {
+  font-size: 0.8125rem;
+}
+
+.register-page .MuiPickersCalendarHeader-root {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.register-page .MuiPickersCalendarHeader-label {
+  font-size: 0.875rem;
+}
+
+.register-page .MuiDayCalendar-weekDayLabel {
+  width: 30px;
+  height: 26px;
+  font-size: 0.75rem;
+}
+
+.register-page .MuiPickersDay-root {
+  width: 30px;
+  height: 30px;
+  font-size: 0.75rem;
+}
+
+.register-page .MuiPickersDay-root.Mui-selected {
+  font-weight: 700;
+}
+
+.register-page .MuiPickersArrowSwitcher-button {
+  padding: 4px;
+}

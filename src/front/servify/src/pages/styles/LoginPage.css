@@ -1,0 +1,170 @@
+/* Área de login força tema claro (evita herdar tipografia/cores do index.css em dark mode) */
+.login-page {
+  position: relative;
+  isolation: isolate;
+  min-height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  box-sizing: border-box;
+  color-scheme: light;
+  background-color: #0f172a;
+  background-image: url('../../assets/bg-corporate.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Overlay escuro sobre o fundo (mock) */
+.login-page::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(15, 23, 42, 0.55);
+  pointer-events: none;
+}
+
+.login-card {
+  position: relative;
+  z-index: 1;
+  width: min(420px, 100%);
+  max-width: 420px;
+  background-color: #ffffff;
+  border-radius: 14px;
+  border: none;
+  box-shadow:
+    0 25px 50px -12px rgba(0, 0, 0, 0.35),
+    0 12px 24px -8px rgba(0, 0, 0, 0.2);
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* ~30–35% da largura em telas largas, sem estreitar o mobile */
+@media (min-width: 1024px) {
+  .login-card {
+    width: min(420px, 35vw);
+  }
+}
+
+.login-logo {
+  display: block;
+  width: min(300px, 100%);
+  height: auto;
+  margin: 0 auto 18px;
+  object-fit: contain;
+}
+
+/* Espaço abaixo do subtítulo até o alerta / formulário */
+.login-subtitle {
+  margin: 0 0 48px;
+}
+
+.login-card .login-alert.MuiAlert-root {
+  margin-bottom: 0;
+  margin-top: 0;
+  color: #991b1b;
+  background-color: #fef2f2;
+  border-color: #fecaca;
+  border-radius: 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  align-items: flex-start;
+  padding: 12px 14px;
+}
+
+.login-card .login-alert .MuiAlert-icon {
+  margin-right: 10px;
+  padding: 0;
+  color: #dc2626;
+  opacity: 1;
+}
+
+.login-card .login-alert .MuiAlert-message {
+  padding: 0;
+}
+
+.login-alert__icon {
+  font-size: 20px;
+}
+
+.login-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #374151;
+}
+
+.login-form {
+  margin-top: 0;
+}
+
+/* Espaço entre alerta de erro e formulário */
+.login-card .login-alert + .login-form {
+  margin-top: 32px;
+}
+
+.login-field .MuiFormControl-root {
+  margin: 0;
+}
+
+/* Campos compactos (alinhados ao botão Entrar) */
+.login-card .login-input .MuiOutlinedInput-root {
+  min-height: 40px;
+  align-items: center;
+  border-radius: 16px;
+}
+
+.login-card .login-input .MuiInputBase-input {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  font-size: 0.875rem;
+  line-height: 1.45;
+}
+
+.login-card .login-input .MuiInputAdornment-root {
+  height: auto;
+  max-height: none;
+  align-self: center;
+}
+
+.login-card .login-input .MuiInputAdornment-root .MuiSvgIcon-root {
+  font-size: 18px;
+}
+
+/* Botão Entrar: compacto */
+.login-card .login-submit.MuiButton-root {
+  min-height: 34px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 6px;
+}
+
+.login-card .login-submit.MuiButton-root:hover {
+  background-color: #162d4a;
+}
+
+/* Espaço entre o botão Entrar e o texto de cadastro */
+.login-footer {
+  margin: 40px 0 0;
+  font-size: 0.8125rem;
+  line-height: 1.5;
+}
+
+.login-footer__muted {
+  color: #6b7280;
+}
+
+.login-footer__link {
+  font-size: inherit;
+  font-weight: 600;
+  color: #1e3a5f;
+}
+
+.login-footer__link:hover {
+  color: #162d4a;
+}
