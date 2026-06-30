@@ -40,7 +40,7 @@ Este trabalho apresenta a proposta de desenvolvimento de uma solução Web chama
 
 O setor de serviços representa uma das principais forças da economia brasileira. Segundo dados do IBGE (2023)<sup>[1.1]</sup>, o setor de serviços corresponde a mais de 70% do PIB nacional, sendo responsável por grande parte da geração de empregos formais e informais no país. Dentro desse contexto, micro e pequenas empresas possuem papel fundamental, representando aproximadamente 99% dos negócios ativos no Brasil (SEBRAE, 2023)<sup>[1.2]</sup>.
 
-O setor de beleza está entre os segmentos que mais crescem no Brasil. Segundo levantamento do Sebrae baseado em dados da Receita Federal, somente em 2023 foram registrados mais de 180 mil novos microempreendedores individuais atuando como cabeleireiros, barbeiros, manicures e demais profissionais da área<sup>[1.3]</sup>. Paralelamente, 3 em cada 4 pequenas empresas brasileiras já utilizam ferramentas digitais para realizar negócios, demonstrando que a transformação digital tornou-se uma necessidade competitiva<sup>[1.4]</sup>. Apesar do crescimento desse segmento, muitos desses empreendedores ainda utilizam ferramentas não especializadas para controle do negócio, como planilhas eletrônicas (ex.: Microsoft Excel) ou anotações manuais e, muitos desses empreendedores ainda administram seus atendimentos por meio de agendas físicas ou aplicativos de mensagens, dificultando o controle de clientes, agendamentos, faturamento e indicadores de desempenho. 
+O setor de beleza está entre os segmentos que mais crescem no Brasil. Segundo levantamento do Sebrae baseado em dados da Receita Federal, somente em 2023 foram registrados mais de 180 mil novos microempreendedores individuais atuando como cabeleireiros, barbeiros, manicures e demais profissionais da área<sup>[1.3]</sup>. Paralelamente, 3 em cada 4 pequenas empresas brasileiras já utilizam ferramentas digitais para realizar negócios, demonstrando que a transformação digital tornou-se uma necessidade competitiva<sup>[1.4]</sup>. Apesar do crescimento desse segmento, muitos desses empreendedores ainda utilizam ferramentas não especializadas para controle do negócio, como planilhas eletrônicas (ex.: Microsoft Excel) ou anotações manuais e, muitos desses empreendedores ainda administram seus atendimentos por meio de agendas físicas ou aplicativos de mensagens, dificultando o controle de clientes, agendamentos, faturamento e indicadores de desempenho.
 
 Embora essas ferramentas atendam necessidades básicas, elas apresentam limitações relacionadas à escalabilidade, controle de acesso, automação de cálculos, geração de relatórios e segurança das informações. Além disso, a falta de sistemas integrados dificulta o acompanhamento em tempo real do faturamento, da produtividade dos colaboradores e do cálculo correto das comissões.
 
@@ -56,11 +56,12 @@ Diante desse cenário, identificou-se uma oportunidade para o desenvolvimento de
 
 Empresas do setor de serviços que trabalham com comissão por atendimento enfrentam dificuldades na gestão e no controle das operações mensais. O cálculo manual das comissões pode gerar erros, retrabalho, conflitos internos e falta de transparência entre colaboradores e gestores.
 
-Além disso, o uso de planilhas não estruturadas dificulta:  
-- O controle preciso dos serviços prestados por colaborador;  
-- A organização da agenda de atendimentos;  
-- A visualização consolidada do faturamento;  
-- A separação de permissões de acesso entre gestores e funcionários;  
+Além disso, o uso de planilhas não estruturadas dificulta:
+
+- O controle preciso dos serviços prestados por colaborador;
+- A organização da agenda de atendimentos;
+- A visualização consolidada do faturamento;
+- A separação de permissões de acesso entre gestores e funcionários;
 - A geração automatizada de relatórios mensais.
 
 Essa realidade impacta diretamente na eficiência operacional, na tomada de decisão e na escalabilidade do negócio.
@@ -75,12 +76,12 @@ Desenvolver uma solução Web para automação da gestão operacional e financei
 
 #### 1.3.1 Objetivos específicos
 
-- Modelar os processos operacionais de empresas do setor de serviços comissionados, identificando suas principais necessidades de gestão;  
-- Desenvolver funcionalidades para cadastro de serviços, colaboradores e parametrização de percentuais de comissão;  
-- Implementar sistema de agendamento integrado ao controle financeiro;  
-- Criar mecanismo de cálculo automático de comissões mensais por colaborador;  
-- Definir níveis de acesso diferenciados (Administrador e Colaborador), garantindo segurança das informações;  
-- Desenvolver relatórios gerenciais que apoiem a tomada de decisão.  
+- Modelar os processos operacionais de empresas do setor de serviços comissionados, identificando suas principais necessidades de gestão;
+- Desenvolver funcionalidades para cadastro de serviços, colaboradores e parametrização de percentuais de comissão;
+- Implementar sistema de agendamento integrado ao controle financeiro;
+- Criar mecanismo de cálculo automático de comissões mensais por colaborador;
+- Definir níveis de acesso diferenciados (Administrador e Colaborador), garantindo segurança das informações;
+- Desenvolver relatórios gerenciais que apoiem a tomada de decisão.
 - Desenvolver uma tela de Dúvidas com um chat interativo integrado a uma IA, permitindo que o usuário converse de forma natural e receba respostas baseadas na base de dados do sistema.
 
 ---
@@ -89,20 +90,22 @@ Desenvolver uma solução Web para automação da gestão operacional e financei
 
 A proposta se justifica pela relevância econômica do setor de serviços e pela alta incidência de micro e pequenas empresas que ainda operam com processos pouco automatizados.
 
-O desenvolvimento da solução contribui para:  
-- Redução de erros no cálculo de comissões;  
-- Aumento da transparência entre gestores e colaboradores;  
-- Organização da agenda e dos atendimentos;  
-- Melhoria na gestão financeira do negócio;  
+O desenvolvimento da solução contribui para:
+
+- Redução de erros no cálculo de comissões;
+- Aumento da transparência entre gestores e colaboradores;
+- Organização da agenda e dos atendimentos;
+- Melhoria na gestão financeira do negócio;
 - Apoio à tomada de decisão baseada em dados.
 
 Além disso, o projeto possui caráter interdisciplinar, integrando conhecimentos de Engenharia de Software, modelagem de sistemas, banco de dados, experiência do usuário e arquitetura Web.
 
 Como contribuição prática, a solução pode evoluir futuramente para um modelo SaaS (Software as a Service), ampliando sua aplicabilidade para diversos segmentos do mercado de serviços.
 
-O diferencial da proposta está na criação de uma solução mais ampla, que não se restrinja exclusivamente a barbearias, mas que atenda qualquer empresa baseada em:  
-- Prestação de serviços;  
-- Remuneração por comissão;  
+O diferencial da proposta está na criação de uma solução mais ampla, que não se restrinja exclusivamente a barbearias, mas que atenda qualquer empresa baseada em:
+
+- Prestação de serviços;
+- Remuneração por comissão;
 - Gestão de agenda e equipe.
 
 Essa abordagem amplia o potencial de mercado e torna o produto escalável.
@@ -113,57 +116,65 @@ A seguir, são apresentados os perfis dos usuários-chave do sistema:
 
 ◘ Administrador (Dono ou Gestor do Negócio)
 
-Perfil:  
-- Idade média: 25 a 50 anos;  
-- Nível de escolaridade: Ensino médio completo ou superior;  
-- Conhecimento tecnológico: Básico a intermediário;  
+Perfil:
+
+- Idade média: 25 a 50 anos;
+- Nível de escolaridade: Ensino médio completo ou superior;
+- Conhecimento tecnológico: Básico a intermediário;
 - Perfil empreendedor, foco em gestão e crescimento.
 
-Responsabilidades no sistema:  
-- Cadastro de serviços e definição de valores;  
-- Cadastro e gestão de colaboradores;  
-- Parametrização de percentuais de comissão;  
-- Visualização de faturamento geral;  
-- Geração de relatórios financeiros;  
-- Controle de permissões de acesso;  
+Responsabilidades no sistema:
+
+- Cadastro de serviços e definição de valores;
+- Cadastro e gestão de colaboradores;
+- Parametrização de percentuais de comissão;
+- Visualização de faturamento geral;
+- Geração de relatórios financeiros;
+- Controle de permissões de acesso;
 - Acompanhamento da produtividade da equipe.
 
 ---
 
 ◘ Colaborador (Barbeiro, Manicure, Esteticista, etc.)
 
-Perfil:  
-- Idade média: 18 a 45 anos;  
-- Conhecimento tecnológico: Básico;  
+Perfil:
+
+- Idade média: 18 a 45 anos;
+- Conhecimento tecnológico: Básico;
 - Foco principal na execução do serviço.
 
-Responsabilidades no sistema:  
-- Visualizar sua agenda de atendimentos;  
-- Registrar serviços realizados (quando aplicável);  
-- Consultar relatório individual de comissões;  
-- Acompanhar histórico de atendimentos.  
+Responsabilidades no sistema:
 
-Restrições:  
-- Não possui acesso ao faturamento global da empresa;  
-- Não visualiza dados salariais de outros colaboradores;  
+- Visualizar sua agenda de atendimentos;
+- Registrar serviços realizados (quando aplicável);
+- Consultar relatório individual de comissões;
+- Acompanhar histórico de atendimentos.
+
+Restrições:
+
+- Não possui acesso ao faturamento global da empresa;
+- Não visualiza dados salariais de outros colaboradores;
 - Não altera parâmetros financeiros do sistema.
 
 ---
 
 ◘ Cliente
 
-Perfil:  
-- Usuário final que utiliza os serviços oferecidos pelo estabelecimento;  
+Perfil:
+
+- Usuário final que utiliza os serviços oferecidos pelo estabelecimento;
 - Pode acessar o sistema para agendar serviços ou acompanhar seus atendimentos.
 
-Responsabilidades no sistema:  
-- Realizar agendamento de serviços;  
-- Consultar horários disponíveis;  
-- Visualizar histórico de atendimentos;  
+Responsabilidades no sistema:
+
+- Realizar agendamento de serviços;
+- Consultar horários disponíveis;
+- Visualizar histórico de atendimentos;
 - Participar de programas de fidelidade ou bonificação.
 
-Restrições:  
-- Não possui acesso a informações internas da empresa;  
+Restrições:
+
+- Não possui acesso a informações internas da empresa;
 - Não visualiza dados de faturamento ou comissão.
 
 ## 3. Modelagem do processo de negócio
@@ -225,7 +236,15 @@ _A sessão a seguir apresenta a descrição do produto de software desenvolvido.
 
 ## 7. Conclusão
 
-_Apresente aqui a conclusão do seu trabalho. Deve ser apresentada aqui uma discussão dos resultados obtidos no trabalho, local em que se verifica as observações pessoais de cada aluno. Essa seção poderá também apresentar sugestões de novas linhas de estudo._
+O desenvolvimento do Servify permitiu demonstrar como a aplicação de tecnologias voltadas à gestão pode contribuir para a modernização de empresas do setor de serviços que utilizam remuneração baseada em comissão. Ao longo deste trabalho, foi possível identificar as principais dificuldades enfrentadas por esses empreendimentos, como a utilização de planilhas eletrônicas, agendas físicas e processos manuais para controle de clientes, colaboradores, serviços, agendamentos e comissões, fatores que comprometem a eficiência operacional e dificultam a tomada de decisões.
+
+A partir da análise desse cenário e da modelagem dos processos de negócio, foi proposta uma solução Web capaz de integrar essas atividades em uma única plataforma. O sistema desenvolvido contempla funcionalidades como gerenciamento de clientes, colaboradores, serviços, agendamentos, cálculo automatizado de comissões e disponibilização de indicadores gerenciais por meio de dashboards interativos, proporcionando maior organização, confiabilidade das informações e redução de erros operacionais.
+
+Os resultados obtidos demonstram que a solução atende aos objetivos propostos, oferecendo uma ferramenta capaz de apoiar a gestão operacional e financeira de pequenos negócios prestadores de serviços. Além de automatizar processos antes realizados manualmente, o Servify fornece informações estratégicas que auxiliam gestores na análise do desempenho da empresa e na tomada de decisões fundamentadas em dados.
+
+Como perspectivas para trabalhos futuros, destacam-se a implementação de novas funcionalidades, como notificações automáticas por WhatsApp ou e-mail, integração com meios de pagamento, controle de estoque, emissão de relatórios financeiros mais avançados e aplicativo para dispositivos móveis. Essas evoluções ampliariam ainda mais o potencial da plataforma e sua aplicabilidade em diferentes segmentos do setor de serviços.
+
+Conclui-se, portanto, que o Servify representa uma solução tecnológica viável e escalável para empresas prestadoras de serviços, contribuindo para a transformação digital de pequenos negócios, promovendo maior eficiência operacional, transparência na gestão e apoio ao crescimento sustentável das organizações.
 
 # REFERÊNCIAS
 

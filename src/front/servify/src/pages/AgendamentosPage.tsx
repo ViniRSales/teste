@@ -38,7 +38,6 @@ import { getClientes, type Cliente } from '../services/clientes'
 import { getColaboradores, type Colaborador } from '../services/colaboradores'
 import { getServicos, type Servico } from '../services/servicos'
 import { formatMoedaBrlFromNumber } from '../utils/masks'
-import { getCurrentUser } from '../auth/session'
 
 const NAVY = '#1e3a5f'
 const BORDER = '#e2e8f0'
@@ -173,12 +172,6 @@ export default function AgendamentosPage() {
   const [deleteOpen, setDeleteOpen] = useState(false)
   const [excluindo, setExcluindo] = useState(false)
   const [grupoSelecionado, setGrupoSelecionado] = useState<Agendamento[] | null>(null)
-
-  const usuarioLogado = getCurrentUser()
-
-  const usuarioLogadoId = usuarioLogado?.id
-
-  const usuarioLogadoPerfilId = usuarioLogado?.perfilId
 
   const diasDaSemana = useMemo(
     () =>
@@ -975,8 +968,6 @@ export default function AgendamentosPage() {
       <AgendamentoFormModal
         open={formOpen}
         mode={formMode}
-        usuarioLogadoId={usuarioLogadoId}
-        usuarioLogadoPerfilId={usuarioLogadoPerfilId}
         initial={selected}
         clientes={clientes}
         colaboradores={colaboradores}
